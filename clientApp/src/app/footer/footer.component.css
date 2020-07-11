@@ -1,0 +1,20 @@
+header {
+  padding-top: 15px;
+  background-color: gray;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+h3 {
+  color: black;
+  font-size: medium;
+  font-weight: 600;
+}
+
+a {
+  color: brown;
+}

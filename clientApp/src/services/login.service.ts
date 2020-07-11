@@ -19,6 +19,9 @@ export class LoginService {
     localStorage.getItem('userRole')
   );
 
+  // user details
+  user: any;
+
   constructor(private httpClient: HttpClient, private router: Router) {}
 
   checkLoginStatus() {
@@ -57,6 +60,7 @@ export class LoginService {
       .post<any>('http://localhost:8080/api/auth/signin', user)
       .pipe(
         map((result) => {
+          this.user = result;
           // console.log(result.accessToken);
           // if result is jwt token
           if (result && result.accessToken) {
@@ -110,5 +114,9 @@ export class LoginService {
 
   get currentUserRole() {
     return this.UserRole.asObservable();
+  }
+
+  get userDetails() {
+    return this.user;
   }
 }
