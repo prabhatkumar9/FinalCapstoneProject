@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="segment">
+    <h3>Sign-Up</h3>
+  </div>
+
+  <form #userRegister="ngForm" (ngSubmit)="addNewUser()">
+    <div class="row">
+      <label for="username" class="label">
+        <input type="text" name="username" #username="ngModel" placeholder="User Name" [(ngModel)]="register.username"
+          required minlength="3">
+        <div class="red-text" *ngIf="username.errors && (username.invalid && username.touched)">
+          <small *ngIf="username.errors.required">Username is required</small>
+          <small *ngIf="username.errors.minlength">Username must contain minimum 3 characters</small>
+        </div>
+      </label>
+    </div>
+
+    <div class="row">
+      <label for="email" class="label">
+        <input type="text" placeholder="Email Address" name="email" [(ngModel)]="register.email" #email="ngModel"
+          class="validate" [pattern]="emailPattern" required>
+        <div class="red-text" *ngIf="email.errors && (email.invalid && email.touched)">
+          <small *ngIf="email.errors.required">Email is required</small>
+          <small *ngIf="email.errors.pattern">Enter valid email id</small>
+        </div>
+      </label> </div>
+
+    <div class="row">
+      <label for="password" class="label">
+        <input type="password" placeholder="Password" name="password" [(ngModel)]="register.password"
+          #password="ngModel" required minlength="6">
+        <div class="red-text" *ngIf="password.errors && (password.invalid && password.touched)">
+          <small *ngIf="password.errors.required">Password is required</small>
+          <small *ngIf="password.errors.minlength">Password is minimum 6 characters long </small>
+        </div>
+      </label> </div>
+    <div class="row">
+      <label for="confirmPassword" class="label">
+        <input type="password" placeholder="confirm Password" name="confirmPassword" [ngModel]
+          #confirmPassword="ngModel" required minlength="6" pattern="{{ password.value }}">
+        <div class="red-text" *ngIf="confirmPassword.errors && (confirmPassword.invalid && confirmPassword.touched)">
+          <small *ngIf="confirmPassword.errors.required">Confirm Password is required</small>
+          <small *ngIf="confirmPassword.errors.pattern">Confirm password and password must match</small>
+        </div>
+      </label> </div>
+
+    <div class="row">
+      <label for="contact" class="label">
+        <input type="text" name="contact" #contact="ngModel" placeholder="Contact Number" [(ngModel)]="register.contact"
+          required minlength="10" maxlength="10">
+        <div class="red-text" *ngIf="contact.errors && (contact.invalid && contact.touched)">
+          <small *ngIf="contact.errors.required">Contact Number is required</small>
+          <small *ngIf="contact.errors.minlength">Mobile Number has 10 digits min.</small>
+          <small *ngIf="contact.errors.maxlength">Mobile Number has 10 digits max. </small>
+        </div>
+      </label>
+    </div>
+
+    <div class="password-hint">Must consist of atleast 6 characters,
+      a symbol, an upper and a lower case letter</div>
+    <br>
+    <button [disabled]="!userRegister.valid" class="btn" type="submit">
+      <i class="fa fa-unlock-alt"> Sign Up </i>
+    </button>
+    <button class="btn" type="reset" (click)="resetForm()">Reset</button>
+  </form>
+</div>

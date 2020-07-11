@@ -1,0 +1,32 @@
+<div class="main">
+  <div class="address">
+    <ul>
+      <li>saved addresses</li>
+    </ul>
+  </div>
+  <div class="newAddress">
+    <form #addForm="ngForm" (ngSubmit)="placeOrder()">
+      <div>
+        <label for="name">
+          <input type="text" placeholder="name of customer" name="name" [(ngModel)]="order.name" #name="ngModel" />
+        </label><br />
+        <label for="address">
+          <input type="text" placeholder="Address of customer" name="address" [(ngModel)]="order.address"
+            #address="ngModel" /> </label><br />
+        <label for="Contact">
+          <input type="text" placeholder="Mobile number of customer" name="contact" [(ngModel)]="order.number"
+            #contact="ngModel" />
+        </label>
+        <!-- <button type="submit" (click)="saveAddress()">Save</button> -->
+      </div>
+      <div class="method">
+        <p>Card? : UPI? : Paytm-Wallet?</p>
+        <input type="text" value="paytm" disabled placeholder="Enter payment method" name="method" (ngModel)="(method)"
+          #method="ngModel" />
+      </div>
+      <div class="proceedtopay">
+        <button type="submit" class="btn">Proceed to pay</button>
+      </div>
+    </form>
+  </div>
+</div>

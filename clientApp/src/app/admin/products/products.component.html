@@ -1,0 +1,75 @@
+<h1>
+  Admin Panel
+</h1>
+
+<!-- {{productList | json}}
+<div class="mainContainer">
+  <div class="productContainer">
+    <table>
+      <thead>
+        <tr>
+          <th id="productname">Name</th>
+          <th id="productPrice">Price</th>
+          <th id="productDescription">Description</th>
+          <th id="productStock">Stock</th>
+          <th id="productListing">Listed</th>
+          <th id="category">Category</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr *ngFor="let item of productList">
+          <td>{{item.productName}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.description}}</td>
+          <td>{{item.stock}}</td>
+          <td>{{item.listed}}</td>
+          <td>{{item.category}}</td>
+          <td><button type="submit">Update</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+
+<!-- data table -->
+<div class="mainContainer">
+  <div class="productContainer">
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>PRICE</th>
+          <th>DESCRIPTION</th>
+          <th>STOCK</th>
+          <th>LISTED</th>
+          <th>CATEGORY</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.productid }}</td>
+          <td>{{ product.productname }}</td>
+          <td>{{ product.price | currency: "INR":"symbol-narrow":".2" }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.stock }}</td>
+          <td>{{ product.listed }}</td>
+          <td>{{ product.category }}</td>
+          <td><button class="update btn-small" (click)="updateProduct(product.productid)">UPDATE</button></td>
+          <td><button class="delete btn-small" (click)="deleteProduct(product.productid)">DELETE</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- end of data table -->
+
+<div class="button">
+  <button class="btn" (click)="addProduct()">ADD NEW PRODUCT</button>
+</div>
+
+<div class="addComponent">
+  <app-add-product [AddProductButton]="showAddComponent" (productAddedEvent)="refreshProductList($event)">
+  </app-add-product>
+</div>
+<!-- <td><button *ngIf="action === 'edit'" [product]="selectedProduct" type="submit">Edit</button></td> -->

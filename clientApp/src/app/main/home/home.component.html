@@ -1,0 +1,22 @@
+<div class="background">
+  <div class="home-container">
+    <div class="container">
+      <div *ngFor="let item of products">
+        <div class="card1">
+          <div class="imgbox">
+            <img class="img" src='../../../assets/{{item.productid}}.jpg' alt="">
+
+          </div>
+          <div class="contentbox">
+            <h2>{{item.productname}}</h2>
+            <p>{{item.description}}</p>
+            <h4>{{item.price | currency: "INR": "symbol-narrow":".2" }}</h4>
+            <span><button class="btn-small" (click)="addToCart(item)">Add to cart</button>
+              <p class="add"></p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

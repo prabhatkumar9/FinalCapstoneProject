@@ -1,0 +1,46 @@
+<div class="main">
+  <h3>Update Product</h3>
+  <div class="maincontainer">
+    <form #updateForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="productname">Product Name</label>
+        <input type="text" id="productname" required [(ngModel)]="product.productname" name="productname" />
+        <br />
+      </div>
+
+      <div class="form-group">
+        <label for="price">Product Price</label>
+        <input type="text" id="price" required [(ngModel)]="product.price" name="price" />
+        <br />
+      </div>
+
+      <div class="form-group">
+        <label for="productDescription">Product Description</label>
+        <input type="text" id="productDescription" required [(ngModel)]="product.description"
+          name="productDescription" />
+        <br />
+      </div>
+
+      <div class="form-group">
+        <label for="productStock">Stock Quantity</label>
+        <input type="text" id="productStock" required [(ngModel)]="product.stock" name="productStock" />
+        <br />
+      </div>
+
+      <div class="form-group">
+        <label>Listing </label>
+        <input type="text" name="listed" required [(ngModel)]="product.listed">
+        <br>
+      </div>
+
+      <div class="form-group">
+        <label>Category </label>
+        <input type="text" name="category" required [(ngModel)]="product.category">
+      </div>
+      <br />
+
+      <button class="btn" type="submit" [disabled]="!updateForm.valid">Save</button>
+
+    </form>
+  </div>
+</div>

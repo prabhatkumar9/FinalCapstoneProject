@@ -1,0 +1,62 @@
+<div *ngIf="cartItems.length == 0" class="alert alert-info">
+  No Items Added.
+  <br />
+  Cart Is Empty.
+</div>
+
+<div class="mainContainer list-group" *ngIf="cartItems.length != 0">
+  <div class="productContainer list-group-item">
+    <table>
+      <thead>
+        <tr>
+          <th id="productname">Name</th>
+          <th id="productPrice">Price</th>
+          <th id="productDescription">Description</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr *ngFor="let item of cartItems">
+          <td>{{ item.productname }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.description }}</td>
+          <td>
+            <button
+              class="small-btn red remove"
+              (click)="removeItem(item.productid)"
+            >
+              Remove
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <strong>Total : {{ totalPrice | currency: "INR" }}</strong>
+
+  <div class="payment">
+    <button class="btn" (click)="gotoShipping()">
+      <h4>Place Order</h4>
+    </button>
+  </div>
+</div>
+
+<!-- <ul class="list-group" *ngIf="cartItems.length != 0">
+  <li class="list-group-item" *ngFor="let item of cartItems">
+    <div class="cart-item">
+      <span>{{ item.productname }}</span> x
+      <span>
+        <span>{{item.itemQuantity}}</span>
+        <span>1 </span>
+        : <strong>{{ item.price | currency: "INR" }}</strong></span>
+      <span>
+        <button class="small-btn red" (click)="removeItem(item.productid)">
+          Remove
+        </button>
+      </span>
+    </div>
+  </li>
+
+  <li class="list-froup item active">
+    <strong>Total : {{ totalPrice | currency: "INR" }}</strong>
+  </li>
+</ul> -->

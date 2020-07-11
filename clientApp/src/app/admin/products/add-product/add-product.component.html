@@ -1,0 +1,34 @@
+<ng-container *ngIf="AddProductButton">
+
+  <div class="container">
+    <h2>Add Product</h2>
+
+    <form #receivedProduct="ngForm" (ngSubmit)="addNewProduct(receivedProduct.value)">
+      <label for="productname">Product Name</label>
+      <input type="text" required id="productname" [(ngModel)]="product.productname" name="productname" />
+      <br />
+
+      <label for="price">Product Price</label>
+      <input type="text" required id="price" [(ngModel)]="product.price" name="price" />
+      <br />
+
+      <label for="productDescription">Product Description</label>
+      <input type="text" required id="productDescription" [(ngModel)]="product.description" name="productDescription" />
+      <br />
+
+      <label for="productStock">Stock Quantity</label>
+      <input type="text" required id="productStock" [(ngModel)]="product.stock" name="productStock" />
+      <br />
+
+      <label>Listing </label>
+      <input type="text" required name="listed" [(ngModel)]="product.listed">
+      <br>
+      <label>Category </label>
+      <input type="text" required name="category" [(ngModel)]="product.category">
+
+      <br />
+      <button class="btn" type="submit" [disabled]="!receivedProduct.valid">Save</button>
+
+    </form>
+  </div>
+</ng-container>

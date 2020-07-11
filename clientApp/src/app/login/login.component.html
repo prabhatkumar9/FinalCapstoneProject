@@ -1,0 +1,41 @@
+<div class="segment">
+  <h3>Login</h3>
+</div>
+<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+
+  <label for="username" class="label">
+    <input type="text" placeholder="User name" name="username" [(ngModel)]="userlogin.username" #username="ngModel"
+      class="validate">
+  </label>
+
+  <label for="password" class="label">
+    <input type="password" placeholder="Password" name="password" [(ngModel)]="userlogin.password" #password="ngModel"
+      class="validate" required minlength="6">
+    <div class="red-text" *ngIf="password.errors && (password.invalid && password.touched)">
+      <small *ngIf="password.errors.required">Password is required</small>
+      <small *ngIf="password.errors.minlength">Password is minimum 6 characters long </small>
+    </div>
+  </label>
+
+  <div class="segment">
+    <button class=" btn" type="submit" [disabled]="!loginForm.valid">
+      <i class="fa fa-unlock-alt"> Log In </i>
+    </button>
+  </div>
+  <div class="segment">
+    <button type="button" class="btn red">Forgot Password</button>
+  </div>
+
+</form>
+<!-- <small class="red-text">
+    <h6>{{ermsg}}</h6>
+  </small>
+  <label for="email" class="label">
+    <input type="text" placeholder="Email Address" name="email" [(ngModel)]="userlogin.email" #email="ngModel"
+      class="validate" [pattern]="emailPattern" required>
+    <div class="red-text" *ngIf="email.errors && (email.invalid && email.touched)">
+      <small *ngIf="email.errors.required">Email is required</small>
+      <small *ngIf="email.errors.pattern">Enter valid email id</small>
+    </div>
+
+  </label> -->

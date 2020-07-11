@@ -1,0 +1,72 @@
+<!-- <header class="container">
+  <img src="" class="logo" alt="" />
+  <nav>
+    <ul class="nav_links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Cart</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Order History</a></li>
+      <li><a href="#">Logout</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Signup</a></li>
+    </ul>
+  </nav>
+</header> -->
+
+<!-- <div class="nav">
+  <div class="nav-container">
+    <ul>
+
+      <li><a href="#"> <i class="fa fa-home" aria-hidden="true"></i>
+          <div class="icons">
+            <p>Home</p>
+          </div>
+        </a></li>
+
+      <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <div class="icons">
+            <p>Cart</p>
+          </div>
+        </a></li>
+
+      <li><i class="fa fa-user" aria-hidden="true"></i>
+        <div class="icons">
+          <p>Profile</p>
+        </div>
+      </li>
+
+      <li><i class="fa fa-history" aria-hidden="true"></i>
+        <div class="icons">
+          <p>Order History</p>
+        </div>
+      </li>
+
+      <li><i class="fa fa-sign-out" aria-hidden="true"></i>
+        <div class="icons">
+          <p>Logout</p>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div> -->
+
+<nav class="nav-extended">
+  <div class="mid">
+    <span *ngIf="Username$ | async as userName">
+      <h3>{{ userName | uppercase }}</h3>
+    </span>
+  </div>
+  <div class="nav-wrapper">
+    <ul class="right">
+      <li><a class="btn-small fa fa-user" routerLink='profile'> Profile</a></li>
+      <li>
+        <a class="btn-small fa fa-history" routerLink='orderHistory'> Order History</a>
+      </li>
+      <li>
+        <a class="btn-small fa fa-shopping-cart" routerLink='cart'>
+          Cart</a>
+      </li>
+    </ul>
+  </div>
+</nav>

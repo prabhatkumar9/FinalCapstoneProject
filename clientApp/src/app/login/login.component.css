@@ -1,0 +1,88 @@
+p,
+input,
+select,
+textarea,
+button {
+  font-family: 'montserrat', sans-serif;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+}
+
+div,
+p {
+  color: #babecc;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+form {
+  padding: 16px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.segment {
+  margin-top: 10px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  border-radius: 320px;
+  padding: 16px;
+  background: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+label {
+  display: block;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+input:focus {
+  box-shadow: inset 1px 1px 2px #babecc, inset 1px -1px 2px #fff;
+}
+
+button:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+button:active {
+  box-shadow: 1px 1px 2px #fff, -1px -1px 2px #babecc;
+}
+
+button.fa {
+  margin-right: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button.unit {
+  border-radius: 8px;
+  line-height: 20px;
+  width: 158px;
+  height: 48px;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+  font-size: 15.2px;
+}
+
+button.unit .fa {
+  margin-right: 0;
+}
+
+/* validation style */
+input.ng-invalid.ng-dirty {
+  border-bottom-color: red !important;
+  box-shadow: 0 1px 0 0 red !important;
+}
+
+/* .ilike-blue-container {
+  @extend .blue-text,
+  .text-lighten-4;
+} */

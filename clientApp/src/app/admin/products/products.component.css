@@ -1,0 +1,31 @@
+.tbody {
+  color: black;
+}
+
+.mainContainer {
+  width: 70%;
+}
+
+h1,
+.button,
+.addComponent,
+.mainContainer {
+  margin-left: 30px;
+}
+
+.addComponent,
+.button {
+  margin-top: 20px;
+}
+
+.delete,
+.update {
+  outline: none;
+  border-radius: 10px;
+  border-style: none;
+  /* padding: 5px; */
+}
+
+.delete {
+  background-color: red;
+}

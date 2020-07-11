@@ -1,0 +1,105 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+.background {
+  background: #ebf5fc;
+  position: static;
+}
+
+.home-container {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: auto;
+  margin-top: 20px;
+}
+
+.container .card1 {
+  width: 350px;
+  margin: 10px;
+  padding: 10px 0px;
+  background: #ebf5fc;
+  border-radius: 20px;
+  box-shadow: -6px -6px 20px rgba(255, 255, 255, 1), 6px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container .card1:hover {
+  box-shadow: inset -6px -6px 20px rgba(255, 255, 255, 1), inset 6px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container .card1 .imgbox {
+  text-align: center;
+}
+
+.container .card1 .imgbox {
+  color: #409ead;
+  font-size: 3vw;
+}
+
+.container .card1 .contentbox {
+  margin-top: 2px;
+  text-align: center;
+}
+
+.container .card1 .contentbox h2 {
+  color: #32a3b1;
+  font-weight: 600;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+.container .card1 .contentbox p {
+  color: #32a3b1;
+}
+
+.container .card1 .contentbox a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 30px;
+  color: #32a3b1;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: -4px -4px 15px rgba(255, 255, 255, 1), 4px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container .card1 .contentbox a:hover {
+  box-shadow: inset -4px -4px 15px rgba(255, 255, 255, 0.5), inset 4px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container .card1 .contentbox a:hover span {
+  display: block;
+  transform: scale(0.98);
+}
+
+.container .card1:hover .imgbox,
+.container .card1:hover .contentbox {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.img {
+  width: 90%;
+  height: 60%;
+  border-radius: 10px;
+}
+
+.btn-small {
+  padding: 5px;
+  border-radius: 3px;
+  outline: none;
+}

@@ -1,0 +1,10 @@
+.cart-item {
+  font-size: small;
+}
+
+.remove {
+  outline: none;
+  border-radius: 5px;
+  border-style: none;
+  padding: 5px;
+}

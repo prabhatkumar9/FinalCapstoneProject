@@ -1,0 +1,30 @@
+<div class="header">
+  <div class="logo">
+    <h2>ART Cart</h2>
+  </div>
+
+  <div class="log-reg">
+    <div class="segment home">
+      <a routerLink="home">
+        <button type="button" class="unit fa fa-home"> Home</button>
+      </a>
+    </div>
+    <div class="segment register" *ngIf="!(LoginStatus$ | async) as loginstatus">
+      <a routerLink="login" *ngIf="loginstatus">
+        <button type="button" class="unit fa fa-sign-in"> Login</button>
+      </a>
+    </div>
+
+    <div class="segment register" *ngIf="(LoginStatus$ | async) as loginstatus">
+      <a>
+        <button type="button" class="unit fa fa-sign-out" (click)="onLogOut()" *ngIf="loginstatus">Logout</button>
+      </a>
+    </div>
+
+    <div class="segment register" *ngIf="!(LoginStatus$ | async) as loginstatus">
+      <a routerLink="signup" *ngIf="loginstatus">
+        <button type="button" class="unit fa fa-unlock-alt"> Sign Up</button>
+      </a>
+    </div>
+  </div>
+</div>
