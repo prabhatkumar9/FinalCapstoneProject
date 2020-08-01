@@ -16,5 +16,10 @@ h3 {
 }
 
 a {
-  color: brown;
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
 }
