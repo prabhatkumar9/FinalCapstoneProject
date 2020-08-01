@@ -14,4 +14,5 @@ Tools used =>
 * Used jwt interceptor to attach jwt token with each api call.
 
 
-https://github.com/prabhatkumar9/FinalCapstoneProject/issues/3#issue-670839727
+
+https://youtu.be/0WMyQXSMblc
