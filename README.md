@@ -1,5 +1,5 @@
 # FinalCapstoneProject
-ecommerce website using springboot and angular10
+Ecommerce Art Gallery WebApp using springboot and angular10
 
 Tools used => 
   1. Backend = > i) Java Springboot.
