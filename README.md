@@ -13,8 +13,6 @@ Tools used =>
 * Used AuthGaurd Service for restricting the admin pages and user need to login for purchase anything or goto cart page.
 * Used jwt interceptor to attach jwt token with each api call.
 
-
-
-https://youtu.be/0WMyQXSMblc
+ Demo link->   https://youtu.be/0WMyQXSMblc
 
 
