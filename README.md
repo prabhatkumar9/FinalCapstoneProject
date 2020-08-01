@@ -4,6 +4,8 @@ ecommerce website using springboot and angular10
 Tools used => 
   1. Backend = > i) Java Springboot.
              = > ii) DataBase MYSql.
+             
+             
   2.) Frontend = >  Angular 10
   
 * For authentication , used JWT with spring security in backend.
